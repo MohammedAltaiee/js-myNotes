@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- external links  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- external links  -->
+
+    <style>
+      body {
+        background-color: rgb(30, 0, 77);
+        font-family: 'Tajawal', sans-serif;
+      }
+      .task {
+        display: flex;
+        background-color: rgb(215, 213, 213);
+        padding: 4px;
+        border-bottom: solid black 1px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px;
+        transition: box-shadow 0.2s;
+        /* box-shadow: 0px 3px 5px gray; */
+      }
+      .done {
+        background-color: rgb(173, 237, 174);
+      }
+      .task:hover {
+        box-shadow: 0px 3px 5px gray;
+      }
+      .tasks-table {
+        background-color: rgb(239, 239, 239);
+        width: 60%;
+        /* height: 500px; */
+        margin-top: 120px;
+      }
+      button {
+        border: none;
+        font-size: 16px;
+        box-shadow: 0px 3px 5px black;
+      }
+      button.circular {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        line-height: 0;
+      }
+      /* family fonts  */
+      /* .tajawal-extralight {
+        font-family: 'Tajawal', sans-serif;
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      .tajawal-light {
+        font-family: 'Tajawal', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      .tajawal-regular {
+        font-family: 'Tajawal', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .tajawal-medium {
+        font-family: 'Tajawal', sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .tajawal-bold {
+        font-family: 'Tajawal', sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .tajawal-extrabold {
+        font-family: 'Tajawal', sans-serif;
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      .tajawal-black {
+        font-family: 'Tajawal', sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      } */
+      /* family fornt  */
+    </style>
+  </head>
+  <body>
+    <div style="direction: ltr">
+      <!-- center div  -->
+      <div style="display: flex; justify-content: center; align-items: center">
+        <!-- tasks table  -->
+        <div class="tasks-table">
+          <!-- header  -->
+          <div
+            style="
+              width: 100%;
+              text-align: center;
+              background: blueviolet;
+              color: white;
+            "
+          >
+            <h1 style="display: inline">مهامي</h1>
+            <button
+              id="addBtn"
+              class="circular"
+              style="float: right; background: white; margin: 5px"
+            >
+              <span class="material-symbols-outlined"> add </span>
+            </button>
+          </div>
+          <!-- header  -->
+          <!-- tasks  -->
+          <div id="tasks" style="padding: 20px">
+            <!-- tsk  -->
+            <div class="task">
+              <!-- tasks info  -->
+              <div style="width: 70%">
+                <h2>reading a book</h2>
+                <div>
+                  <span class="material-symbols-outlined">
+                    calendar_today
+                  </span>
+                  <span> 10/10/2024 </span>
+                </div>
+              </div>
+              <!-- tasks info -->
+              <!-- tasks actions  -->
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  width: 20%;
+                "
+              >
+                <button
+                  class="circular"
+                  style="background-color: red; color: white"
+                >
+                  <span class="material-symbols-outlined"> delete </span>
+                </button>
+                <button
+                  class="circular"
+                  style="background-color: green; color: white"
+                >
+                  <span class="material-symbols-outlined"> check </span>
+                </button>
+                <button
+                  class="circular"
+                  style="background-color: rgb(49, 22, 205); color: white"
+                >
+                  <span class="material-symbols-outlined"> edit_document </span>
+                </button>
+              </div>
+              <!-- tasks actions  -->
+            </div>
+            <!-- tsk  -->
+            <!-- tsk  -->
+            <div class="task">
+              <!-- tasks info  -->
+              <div style="width: 70%">
+                <h2>reading a book</h2>
+                <div>
+                  <span> 10/10/2024 </span>
+                </div>
+              </div>
+              <!-- tasks info -->
+              <!-- tasks actions  -->
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  width: 20%;
+                "
+              >
+                <button
+                  class="circular"
+                  style="background-color: red; color: white"
+                >
+                  <span class="material-symbols-outlined"> delete </span>
+                </button>
+                <button
+                  class="circular"
+                  style="background-color: green; color: white"
+                >
+                  <span class="material-symbols-outlined"> check </span>
+                </button>
+                <button
+                  class="circular"
+                  style="background-color: rgb(49, 22, 205); color: white"
+                >
+                  <span class="material-symbols-outlined"> edit_document </span>
+                </button>
+              </div>
+              <!-- tasks actions  -->
+            </div>
+            <!-- tsk  -->
+            <!-- tsk  -->
+            <div class="task">
+              <!-- tasks info  -->
+              <div style="width: 70%">
+                <h2>reading a book</h2>
+                <div>
+                  <span> 10/10/2024 </span>
+                </div>
+              </div>
+              <!-- tasks info -->
+              <!-- tasks actions  -->
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  width: 20%;
+                "
+              >
+                <button
+                  class="circular"
+                  style="background-color: red; color: white"
+                >
+                  <span class="material-symbols-outlined"> delete </span>
+                </button>
+                <button
+                  class="circular"
+                  style="background-color: green; color: white"
+                >
+                  <span class="material-symbols-outlined"> check </span>
+                </button>
+                <button
+                  class="circular"
+                  style="background-color: rgb(49, 22, 205); color: white"
+                >
+                  <span class="material-symbols-outlined"> edit_document </span>
+                </button>
+              </div>
+              <!-- tasks actions  -->
+            </div>
+            <!-- tsk  -->
+            <!-- tsk  -->
+            <div class="task">
+              <!-- tasks info  -->
+              <div style="width: 70%">
+                <h2>reading a book</h2>
+                <div>
+                  <span> 10/10/2024 </span>
+                </div>
+              </div>
+              <!-- tasks info -->
+              <!-- tasks actions  -->
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  width: 20%;
+                "
+              >
+                <button
+                  class="circular"
+                  style="background-color: red; color: white"
+                >
+                  <span class="material-symbols-outlined"> delete </span>
+                </button>
+                <button
+                  class="circular"
+                  style="background-color: green; color: white"
+                >
+                  <span class="material-symbols-outlined"> check </span>
+                </button>
+                <button
+                  class="circular"
+                  style="background-color: rgb(49, 22, 205); color: white"
+                >
+                  <span class="material-symbols-outlined"> edit_document </span>
+                </button>
+              </div>
+              <!-- tasks actions  -->
+            </div>
+            <!-- tsk  -->
+          </div>
+          <!-- tasks  -->
+        </div>
+        <!-- tasks table -->
+      </div>
+      <!-- center div  -->
+    </div>
+  </body>
+  <script>
+    let tasks = [
+      {
+        title: 'reading books ',
+        date: '10/10/2024',
+        isDone: true,
+      },
+      {
+        title: 'finishing a book',
+        date: '10/10/2024',
+        isDone: false,
+      },
+      {
+        title: 'pray',
+        date: '10/10/2024',
+        isDone: false,
+      },
+      {
+        title: 'cook',
+        date: '10/10/2024',
+        isDone: false,
+      },
+      {
+        title: 'play',
+        date: '10/10/2024',
+        isDone: false,
+      },
+    ];
+
+    function getTaskFromStorage() {
+      let retrievedTasks = JSON.parse(localStorage.getItem('tasks'));
+      tasks = retrievedTasks ?? [];
+    }
+    getTaskFromStorage();
+    function fillTaskOfTable() {
+      document.getElementById('tasks').innerHTML = ' ';
+      let index = 0;
+
+      for (task of tasks) {
+        let content = `
+      <!-- tsk  -->
+            <div class="task ${task.isDone ? 'done' : ''}">
+              <!-- tasks info  -->
+              <div style="width: 70%">
+                <h2>${task.title}</h2>
+                <div>
+                  <span class="material-symbols-outlined">
+                    calendar_today
+                  </span>
+                  <span>${task.date}</span>
+                </div>
+              </div>
+              <!-- tasks info -->
+              <!-- tasks actions  -->
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  width: 20%;
+                "
+              >
+                <button onclick="delTask(${index})"
+                  class="circular"
+                  style="background-color: red; color: white"
+                >
+                  <span class="material-symbols-outlined"> delete </span>
+                </button>
+                <button onclick="doneTask(${index})"
+                  class="circular"
+                  style="background-color: green; color: white"
+                >
+                  <span class="material-symbols-outlined">  ${
+                    task.isDone ? 'check' : 'sentiment_dissatisfied'
+                  } </span>
+                </button>
+                <button onclick="editTasks(${index})"
+                  class="circular"
+                  style="background-color: rgb(49, 22, 205); color: white"
+                >
+                  <span class="material-symbols-outlined"> edit_document </span>
+                </button>
+              </div>
+              <!-- tasks actions  -->
+            </div>
+            <!-- tsk  -->
+            `;
+        document.getElementById('tasks').innerHTML += content;
+        index++;
+      }
+    }
+
+    fillTaskOfTable();
+    document.getElementById('addBtn').addEventListener('click', function () {
+      let taskName = prompt('please input the title');
+      let now = new Date();
+      let date =
+        now.getDate() + '/' + (now.getMonth() + 1) + '/' + now.getFullYear();
+      let taskObj = {
+        title: taskName,
+        date: date,
+        isDone: false,
+      };
+      tasks.push(taskObj);
+      storeTasks();
+      fillTaskOfTable();
+    });
+
+    function editTasks(index) {
+      let task = tasks[index];
+      let newTaskName = prompt('please select the new task', task.title);
+      // alert(newTaskName);
+      task.title = newTaskName;
+      storeTasks();
+      fillTaskOfTable();
+    }
+    function delTask(index) {
+      let task = tasks[index];
+      let confirmed = confirm(
+        'Are you sure you want to delete the ' + task.title + '?'
+      );
+      if (confirmed) {
+        tasks.splice(index, 1);
+        storeTasks();
+        fillTaskOfTable();
+      }
+    }
+    function doneTask(index) {
+      let task = tasks[index];
+      task.isDone = !task.isDone;
+      storeTasks();
+      fillTaskOfTable();
+    }
+
+    //================storage function====//
+    function storeTasks() {
+      let tasksString = JSON.stringify(tasks);
+      localStorage.setItem('tasks', tasksString);
+    }
+  </script>
+</html>
